@@ -2,6 +2,7 @@ import pandas as pd
 import joblib
 from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier as mo
+from sklearn.feature_selection import SelectKBest,f_classif
 from sklearn.model_selection import train_test_split
 import pickle
 
@@ -64,7 +65,7 @@ def ifit(mod,df,des=None):
 
 
 def temp(mod):
-    
+
     df=pd.read_csv('train.csv')
     X=df.drop(['Category','Descript','Resolution','Dates'],axis=1)
     Y=df['Category']
@@ -73,11 +74,23 @@ def temp(mod):
     score=mod.score(x_test,y_test)
     print(score)
 
+def Feature_Selection():
+    data=pd.read_csv('train.csv')
+    transform(data)
+    X = data.drop(['Category','Descript','Resolution','Dates'],axis=1) 
+    y = data['Category'] 
+    bestfeatures = SelectKBest(score_func=f_classif, k='all')
+    fit = bestfeatures.fit(X,y)
+    dfscores = pd.DataFrame(fit.scores_)
+    dfcolumns = pd.DataFrame(X.columns)
+    featureScores = pd.concat([dfcolumns,dfscores],axis=1)
+    featureScores.columns = ['Specs','Score']
+    print(featureScores.nlargest(5,'Score'))
+
 def main():
     '''df=pd.read_csv('train.csv')
     make_transform(df)
     des=df['Category'].unique()'''
-
     df=pd.read_csv('train.csv',chunksize=8781)
     mod=makeModel()
     classes=unique_classes()
@@ -92,4 +105,5 @@ def main():
     store_model(mod)
 
 if __name__=='__main__':
-    main()
+    secondmain()
+    #main()
