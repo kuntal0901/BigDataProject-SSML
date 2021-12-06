@@ -28,23 +28,23 @@ Given the Common Features make Use of these features in order to predict the Cat
   not present in our test csv file),Category(As it was our predictor
   variable) and Address(too many unique values to get accurate results).
 
-2)Building Model 
+2)Building Model <br />
   Next step towards our implementation was to build models.
   Since the model had to be built using an incremental approach i.e. fitting the
   data from each batch we have used three such models which support
   incremental fit which include Stochastic GradientDescent
-  Classifier,NaiveBayes Classifier,Passive Aggressive Classifier.
-3)Learning from train data
+  Classifier,NaiveBayes Classifier,Passive Aggressive Classifier.<br />
+3)Learning from train data<br />
   After each batch of Data is preprocessed we fed the data to our models and
   store the final trained model in the current directory using the concept of pickle
-  and joblib.
-4)Testing Your Model 
+  and joblib.<br />
+4)Testing Your Model <br />
   After streaming the entire data and training the model we started streaming
   the test data and preprocessed similar to our training data ,then used a stored
-  model to predict the values for our category column.
-5)Clustering
+  model to predict the values for our category column.<br />
+5)Clustering<br />
   As a part of clustering we used MinKBatchMeans to find the clusters on our
-  test dataset.
+  test dataset.<br />
 
 
 ### Involvment and Contribution of team members
