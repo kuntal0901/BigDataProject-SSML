@@ -34,14 +34,17 @@ Given the Common Features make Use of these features in order to predict the Cat
   data from each batch we have used three such models which support
   incremental fit which include Stochastic GradientDescent
   Classifier,NaiveBayes Classifier,Passive Aggressive Classifier.<br />
+  <br />
 3)Learning from train data<br />
   After each batch of Data is preprocessed we fed the data to our models and
   store the final trained model in the current directory using the concept of pickle
   and joblib.<br />
+  <br />
 4)Testing Your Model <br />
   After streaming the entire data and training the model we started streaming
   the test data and preprocessed similar to our training data ,then used a stored
   model to predict the values for our category column.<br />
+  <br />
 5)Clustering<br />
   As a part of clustering we used MinKBatchMeans to find the clusters on our
   test dataset.<br />
