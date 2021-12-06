@@ -65,6 +65,6 @@ def test(mod,x,Y,accli):
     x=x.toPandas()
     y=mod.predict(x)
     Y=Y.toPandas()
-    y1=list(map(lambda x:(str(x),),y))
+    #y1=list(map(lambda x:(str(x),),y))
     accli.append(metrics.accuracy_score(Y,y))
-    return y1
+    #return y1
