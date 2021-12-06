@@ -68,7 +68,7 @@ def preprocessing(df):
    else:
        uni=list(categorymappings.keys())
        model.ifit(Model,df_X_final,df_Y_final,uni)
-   df_X_final.show()
+   df_X_final.show() #shows
 
 
 
