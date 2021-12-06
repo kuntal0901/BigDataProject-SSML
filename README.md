@@ -48,7 +48,8 @@ Given the Common Features make Use of these features in order to predict the Cat
 5)Clustering<br />
   As a part of clustering we used MinKBatchMeans to find the clusters on our
   test dataset.<br />
-
+<br />
+### We have also found the importance of preprocessing on the acuracy by training our model with less features removing those having low variance and also havin very very high variance which signify most of them are same or completly different which will not help in training model accurately.
 
 ### Involvment and Contribution of team members
 1) Kuntal Gorai (PES2UG19CS198) --> Preprocessing,Streaming,Report Making,Effect of preprocessing on Accuarcy.(Assisted in making models also)
