@@ -13,10 +13,10 @@ Model=model.makeModel()
 flag=True
 
 sc = SparkContext("local[2]", "crime_data")	
-fp=open('/home/kuntal/BigDataProject-SSML-main/mappings/addmapp.txt','r')
-fp1=open("/home/kuntal/BigDataProject-SSML-main/mappings/pdmapp.txt","r")
-fp2=open("/home/kuntal/BigDataProject-SSML-main/mappings/dowmapp.txt","r")
-fp3=open("/home/kuntal/BigDataProject-SSML-main/mappings/Catmap.txt","r")
+fp=open('../mappings/addmapp.txt','r')
+fp1=open("../mappings/pdmapp.txt","r")
+fp2=open("../mappings/dowmapp.txt","r")
+fp3=open("../mappings/Catmap.txt","r")
 
 addressmappings=ast.literal_eval(fp.read())
 dayofweekmappings=ast.literal_eval(fp2.read())

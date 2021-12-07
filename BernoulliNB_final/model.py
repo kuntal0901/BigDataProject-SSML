@@ -4,6 +4,7 @@ from sklearn import preprocessing
 from sklearn.naive_bayes import BernoulliNB as mo
 from sklearn.feature_selection import SelectKBest,f_classif
 from sklearn.model_selection import train_test_split
+from sklearn import metrics
 import pickle
 
 def load_model():
@@ -57,9 +58,12 @@ def ifit(mod,X,Y,des=None):
         print(e)
 
 
-def test(mod,x):
+def test(mod,x,Y=None,accli=None):
     print("Predicting ...............................................................................")
     x=x.toPandas()
     y=mod.predict(x)
     y1=list(map(lambda x:(str(x),),y))
+    if Y is not None:
+        Y=Y.toPandas()
+        accli.append(metrics.accuracy_score(Y,y))
     return y1
