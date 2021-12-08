@@ -16,7 +16,7 @@ def load_model():
     models.append(joblib.load('SGD.joblib'))
     return models
 
-def store_model(mod):
+def store_model(models):
     print("Storing model............................................................................")
     joblib.dump(models[0],'Bernoulli.jobllib')
     joblib.dump(models[1],'PassiveAggressive.jobllib')
@@ -65,7 +65,7 @@ def ifit(models,X,Y,des=None):
             print(e)
 
 
-def test(mod,x,Y=None,accli=None):
+def test(models,x,Y=None,accli=None):
     print("Predicting ...............................................................................")
     x=x.toPandas()
     out=[]
