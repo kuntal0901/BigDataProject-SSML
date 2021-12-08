@@ -54,11 +54,11 @@ Given the Common Features make Use of these features in order to predict the Cat
 ### Involvment and Contribution of team members
 1) Kuntal Gorai (PES2UG19CS198) --> Preprocessing,Streaming,Report Making,Effect of preprocessing on Accuarcy.(Assisted in making models also)
    Time spent: 50hrs+++
-2) S Mahammad Aasheesh (PES2UG19CS341) -->Incremental Models idea, Helped in Giving idea of Mappings,Dealing with Models.
+2) S Mahammad Aasheesh (PES2UG19CS342) -->Incremental Models idea, Helped in Giving idea of Mappings,Dealing with Models.
    Time Spent: 40hrs ++
 4) S V S C Santosh (PES2UG19CS346) --> Preprocessing,Streaming,Report Making,Effect of preprocessing on Accuarcy.(Assisted in making models also).
    Time Spent: 50hrs+++
-4) Sai Eeshan Reddy Tallapalli --> Incremental Models idea and assistance has been provided in Making model.
+4) Sai Eeshan Reddy Tallapalli (PES2UG19CS351) --> Incremental Models idea and assistance has been provided in Making model.
    Time Spent: 30hrs+++
 
 
